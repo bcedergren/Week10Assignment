@@ -1,5 +1,5 @@
 // Function to add a new row to the table
-function addRow() {
+const addRow = () => {
   const name = document.getElementById("name").value;
   const age = document.getElementById("age").value;
   const email = document.getElementById("email").value;
@@ -15,12 +15,10 @@ function addRow() {
   document.getElementById("name").value = "";
   document.getElementById("age").value = "";
   document.getElementById("email").value = "";
-}
+};
 
 // Handle form submission
-document
-  .getElementById("data-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    addRow();
-  });
+document.getElementById("data-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  addRow();
+});
